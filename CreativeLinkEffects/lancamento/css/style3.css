@@ -1,0 +1,140 @@
+nav a {
+	position: relative;
+	display: inline-block;
+	margin: 15px 25px;
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.35em;
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+
+/* Effect 1: Brackets */
+/* Effect 10: reveal, push out */
+.cl-effect-10  {
+	position: relative;
+	z-index: 1;
+}
+
+.cl-effect-10 a {
+	overflow: hidden;
+	margin: 0 15px;
+}
+
+.cl-effect-10 a span {
+	display: block;
+	padding: 10px 20px;
+	background: black;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.cl-effect-10 a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	padding: 10px 20px;
+	width: 100%;
+	height: 100%;
+	background: white;
+	color: black;
+	content: attr(data-hover);
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform: translateX(-25%);
+}
+
+.cl-effect-10 a:hover span,
+.cl-effect-10 a:focus span {
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.cl-effect-10 a:hover::before,
+.cl-effect-10 a:focus::before {
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	transform: translateX(0%);
+}body {
+	background: url(../images/canvas.jpg);
+}
+.container > header h1,
+.container > header h2 {
+	color: #222;
+}
+
+.cs-text {
+	text-align: center;
+	margin-top: 70px;
+}
+
+.cs-text span[class^="word"] {
+	display: inline-block;
+	margin: 0 15px;
+
+}
+
+.cs-text span[class^="char"] {
+	width: 90px;
+	height: 100px;
+	display: inline-block;
+	background: #e4d095;
+	color: #2a1f1b;
+	border-radius: 4px;
+	font-size: 60px;
+	font-weight: 400;
+	line-height: 100px;
+	margin: 10px 3px;
+	text-align: center;
+	cursor: default;
+	font-family: "Spinnaker", Arial, sans-serif;
+	text-shadow: 
+		1px 1px 1px rgba(255, 255, 255, 0.9), 
+		0 -1px 1px rgba(255,255,255,0.2);
+	text-transform: uppercase;
+	box-shadow: 
+		1px 7px 15px rgba(0,0,0,0.8),
+		inset 3px 0 2px rgba(255,255,255,0.4),
+		inset 0 3px 0px rgba(255,255,255,0.5),
+		inset -2px -3px 0px rgba(143,128,82,0.6);
+}
+
+.cs-text span[class^="char"]:nth-child(odd) {
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
+	-ms-transform: rotate(2deg);
+	transform: rotate(2deg);
+}
+
+.cs-text span[class^="char"]:nth-child(3n) {
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+}
+
+.cs-text > span:nth-child(5) span,
+h3.cs-text span[class^="char"]  {
+	color: #a62a19;
+}
+
+h3.cs-text span[class^="char"] {
+	font-size: 40px;
+	width: 50px;
+	height: 60px;
+	line-height: 60px;
+}
